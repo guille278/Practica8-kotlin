@@ -13,7 +13,7 @@
         android:layout_height="300dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/img1" />
+        app:srcCompat="@drawable/img2" />
 
     <TextView
         android:id="@+id/tv_titulo"
