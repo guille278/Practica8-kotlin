@@ -8,7 +8,7 @@ import android.widget.RatingBar
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class PeliculaAdapter(val lista : ArrayList<Pelicula>) : RecyclerView.Adapter<PeliculaAdapter.ViewHolder>() {
+class PeliculaAdapter(private val lista : ArrayList<Pelicula>) : RecyclerView.Adapter<PeliculaAdapter.ViewHolder>() {
 
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -34,8 +34,9 @@ class PeliculaAdapter(val lista : ArrayList<Pelicula>) : RecyclerView.Adapter<Pe
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.titulo.setText(lista.get(position).titulo)
-        holder.genero.setText(lista.get(position).genero)
-        holder.calificacion.rating = lista.get(position).calificacion.toFloat()
+        holder.imagen.setImageResource(lista[position].imagen)
+        holder.titulo.setText(lista[position].titulo)
+        holder.genero.setText(lista[position].genero)
+        holder.calificacion.rating = lista[position].calificacion.toFloat()
     }
 }
